@@ -19,10 +19,10 @@
 		height: auto;
 		margin-top: auto;
 		margin-bottom: auto;
-		margin-left: 50%;
+		margin-left: auto;
 		margin-right: auto;
 		opacity: .5;
-		filter: alpha(opacity=50);                  
+		filter: alpha(opacity=50);
 	}
 	.txt {
 		font-family: 'Kalam', cursive;
@@ -32,7 +32,7 @@
  		border: none;
  		color: white;
  		padding: 15px 32px;
- 		text-align: left;
+ 		text-align: center;
  		text-decoration: none;
  		display: inline-block;
  		font-size: 16px;
@@ -58,10 +58,10 @@
 </style>
 </head>
 <h1> Largemouth and Smallmouth Bass Weight Calculator </h1>
-<h2>  Forgot to bring a scale? Don't fret and use our app! Simply enter the length and girth (in inches).</h1>
-<button class = "button" onclick="getLen()">Click to Enter Length(in)</button>
+<h2>  Forgot to bring a scale? Don't fret and use our app! Simply select the species, enter length and girth.</h1>
+<center><button class = "button" onclick="getLen()">Click to Enter Length(in)</button>
 <br><br><button class = "button" onclick="getGirth()">Click to Enter Girth (in)</button>
-<br><br><button class = "calcBtn" onclick="calc()">CALCULATE</button>
+<br><br><button class = "calcBtn" onclick="calc()">CALCULATE</button></center>
 
 <script>
 var len, girth, firstEquation, solution;
@@ -76,7 +76,7 @@ function getGirth(){
 function calc(){
 	firstEquation = girth * (len*len);
 	solution = firstEquation/1175;
-	alert("The estimated weight of the fish is: " + solution.toFixed(2) + "lbs!");
+	alert("The estimatd weight of the fish is: " + solution.toFixed(2) + "lbs!");
 
 }
 </script>
