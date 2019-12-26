@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Kalam&display=swap" rel="stylesheet">
+
+
+<style>
+	h1 {
+		text-align: center;
+		font-family: lucida console
+	}
+	h2 {
+		text-align: center;
+		font-family: 'Kalam', cursive;
+	}
+	img {
+		display: block;
+		max-width: 100;
+		height: auto;
+		margin-top: auto;
+		margin-bottom: auto;
+		margin-left: 50%;
+		margin-right: auto;
+		opacity: .5;
+		filter: alpha(opacity=50);
+	}
+	.txt {
+		font-family: 'Kalam', cursive;
+	}
+	.button {
+		background-color: #4CAF50; /* Green */
+ 		border: none;
+ 		color: white;
+ 		padding: 15px 32px;
+ 		text-align: left;
+ 		text-decoration: none;
+ 		display: inline-block;
+ 		font-size: 16px;
+		cursor: pointer;
+	}
+	.calcBtn{
+		background-color: #195d8e;
+		border: none;
+		color: white;
+		padding: 15px 32px;
+		text-align: left;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		cursor: pointer;
+	}
+	.fineTxt{
+		font-size: 14px;
+		font-family: monospace;
+		text-align: center;
+	}
+
+</style>
+</head>
+<h1> Largemouth and Smallmouth Bass Weight Calculator </h1>
+<h2>  Forgot to bring a scale? Don't fret and use our app! Simply select the species, enter length and girth.</h1>
+<button class = "button" onclick="getLen()">Click to Enter Length(in)</button>
+<br><br><button class = "button" onclick="getGirth()">Click to Enter Girth (in)</button>
+<br><br><button class = "calcBtn" onclick="calc()">CALCULATE</button>
+
+<script>
+var len, girth, firstEquation, solution;
+function getLen(){
+	len = prompt("What is the fish's length?");
+}
+
+function getGirth(){
+	girth = prompt("What is the fish's girth?");
+}
+
+function calc(){
+	firstEquation = girth * (len*len);
+	solution = firstEquation/1175;
+	alert("The estimatd weight of the fish is: " + solution.toFixed(2) + "lbs!");
+
+}
+</script>
+
+<div class = "img"> <img src = "http://clipart-library.com/img/850259.png"></div>
+<p class = "fineTxt"> This program estimates the weight of your fish - It is not an exact and precise number, as a variety of other factors can contribute to the fish's weight. </p>
+</html>
