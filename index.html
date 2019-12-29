@@ -5,6 +5,55 @@
 
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body {
+	background-color: #c6c6eb
+;
+}
+
+.title {
+	font-family: "Montserrat";
+	text-align: center;
+	color: #FFF;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 50vh;
+	letter-spacing: 1px;
+}
+
+h1 {
+	background-image: url(https://media.giphy.com/media/ZY7tD6FsWhTyEUPNyR/source.gif);
+	background-size: cover;
+	color: transparent;
+	-moz-background-clip: text;
+	-webkit-background-clip: text;
+	text-transform: uppercase;
+	font-size: 120px;
+	line-height: .75;
+	margin: 10px 0;
+}
+/* styling my button */
+
+.white-mode {
+	text-decoration: none;
+	padding: 7px 10px;
+	background-color: #122;
+	border-radius: 3px;
+	color: #FFF;
+	transition: .35s ease-in-out;
+	position: absolute;
+	left: 15px;
+	bottom: 15px;
+	font-family: "Montserrat";
+}
+
+.white-mode:hover {
+	background-color: #FFF;
+	color: #122;
+}
+
 	h1 {
 		text-align: center;
 		font-family: lucida console
@@ -57,12 +106,16 @@
 
 </style>
 </head>
-<h1> Largemouth and Smallmouth Bass Weight Calculator </h1>
-<h2>  Forgot to bring a scale? Don't fret and use our app! Simply select the species, enter length and girth.</h1>
+<div class="title">
+ <h1>Multispecies<br/>Fish Weight Calculator</h1>
+
+</div>
+<h2>  Forgot to bring a scale? Don't fret and use our app! Simply select the species and enter length and girth. Tight lines!</h1>
 <center><button class = "button" onclick="getLen()">Click to Enter Length(in)</button>
 <br><br><button class = "button" onclick="getGirth()">Click to Enter Girth (in)</button>
-<br><br><button class = "calcBtn" onclick="calc()">CALCULATE</button></center>
-
+<br><br><button class = "calcBtn" onclick="calcBass()">Calculate Bass</button>
+<button class = "calcBtn" onclick="calcTrout()">Calculate Trout</button>
+<button class = "calcBtn" onclick="calcWalleye()">Calculate Walleye</center>
 <script>
 var len, girth, firstEquation, solution;
 function getLen(){
@@ -73,11 +126,23 @@ function getGirth(){
 	girth = prompt("What is the fish's girth?");
 }
 
-function calc(){
+function calcBass(){
 	firstEquation = girth * (len*len);
 	solution = firstEquation/1175;
 	alert("The estimatd weight of the fish is: " + solution.toFixed(2) + "lbs!");
 
+}
+
+function calcTrout(){
+	firstEquation = (len * girth *girth);
+	solution = firstEquation/800;
+	alert("The estimated weight of the fish is: " + solution.toFixed(2)+ " lbs!");
+}
+
+function calcWalleye(){
+	firstEquation = (len * len * len);
+	solution = firstEquation/2700;
+	alert("The estimated weight of the fish is: " + solution.toFixed(2) + " lbs!");
 }
 </script>
 
