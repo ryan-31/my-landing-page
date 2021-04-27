@@ -3,21 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
- 
 <link rel="icon" href="favicon.ico" type = "image/x-icon">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <style>
-.about-me{
-  margin-left: 70px;
-  margin-right: 70px;
+.profPic {
+  margin-top: 25px;
 }
-  .warpper{
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-}
-.warpper{
+.wrapper{
   display:flex;
   flex-direction: column;
   align-items: center;
@@ -63,12 +56,14 @@
 }
 #one:checked ~ .panels #one-panel,
 #two:checked ~ .panels #two-panel,
-#three:checked ~ .panels #three-panel{
+#three:checked ~ .panels #three-panel,
+#four:checked ~ .panels #four-panel{
   display:block
 }
 #one:checked ~ .tabs #one-tab,
 #two:checked ~ .tabs #two-tab,
-#three:checked ~ .tabs #three-tab{
+#three:checked ~ .tabs #three-tab,
+#four:checked ~ .tabs #four-tab{
   background:#fffffff6;
   color:#000;
   border-top: 3px solid #000;
@@ -76,41 +71,63 @@
 .exp {
   text-align: left;
 }
+
+#parent {
+  height: 30px;
+  white-space: nowrap;
+  overflow: hidden; 
+  /*font-family: 'Source Code Pro', monospace;  */
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.7);
+position: relative;
+       }
+#parent {
+  animation: animated-text 2s steps(30,end) 1s 1 normal both
+  }
+
+@keyframes animated-text{
+    from{width: 0;}
+    to{width: 480px;}
+  }
 </style>
 
 <div align = "center">
 <title>Ryan Sanchez &#8211; Aspiring Software Developer</title>
-<img width="150" height="150" src=".Landing Page/circlePic.png" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy" srcset="./circlePic.png 150w, ./circlePic.png" sizes="(max-width: 150px) 100vw, 150px" />
+
+<img width="125" height="125" src=".Landing Page/circlePic.png" class="attachment-thumbnail size-thumbnail profPic" alt="" loading="lazy" srcset="./circlePic.png 150w, ./circlePic.png" sizes="(max-width: 150px) 100vw, 150px" />
 <h2>Ryan Sanchez</h2>
 <div>
-<p>Aspiring Software Developer</p>
+<p id = "parent" class = "name">Aspiring Software Developer</p>
 <br>
-<h2 class = "w3-container w3-center w3-animate-left">About Me</h2>
-<p class = "about-me, w3-container w3-center w3-animate-left">My passion for computer science manifested when I found Google Chrome’s ‘Inspect Element’ function, which allows you to see a site’s code. I found this fascinating, and was mesmerized by the thousands of lines of code that make a website work. That night, I raced to my computer and played around with the code. Immediately, I began to experiment and teach myself, watching countless tutorials. I coded my own websites and programs, and began to teach myself different languages, from C++ to Python. I also love to share my passion with others; I lead my school’s computer science club, where I introduce members to the wondrous capabilities of programming. I have always been amazed by the practical implementations of programming, such as understanding data and turning ideas into apps.</p>
-</div>
-<div class="warpper">
+
+<div class="wrapper">
   <input class="radio" id="one" name="group" type="radio" checked>
   <input class="radio" id="two" name="group" type="radio">
   <input class="radio" id="three" name="group" type="radio">
+  <input class="radio" id="four" name="group" type="radio">
   <div class="tabs">
-  <label class="tab" id="one-tab" for="one">Education</label>
-  <label class="tab" id="two-tab" for="two">Experience</label>
-  <label class = "tab" id="three-tab" for="three">More</label>
+  <label class="tab" id="one-tab" for="one">About Me</label>
+  <label class="tab" id="two-tab" for="two">Education</label>
+  <label class="tab" id="three-tab" for="three">Experience</label>
+  <label class="tab" id="four-tab" for="four">Links</label>
     </div>
   <div class="panels">
-  <div class="panel" id="one-panel">
+  <div class="panel" id = "one-panel">
+    <p>I am an incoming Computer Science student at the University of Delaware, and am excited to expand my knowledge and delve deeper into computer science. My passion for programming manifested when I was in middle school experimenting with Google Chrome's Inspect Element feature. I was fascinated by the thousands of lines of code doing the work behind the scenes, and started my journey into programming. <br>Beginning with HTML and CSS, I learned aspects of web development and took a FreeCodeCamp course in Responsive Web Design. Soon, I explored other languages such as JavaScript, Java, C++, C, and Python. I also love to share my passion with others; at my high school, I am an officer in the Computer Science Club,where I lead discussions and create tutorials.</p>
+  </div>
+  <div class="panel" id="two-panel">
     <p>I&#8217;m currently attending NVD High School and expect to graduate in June 2021 with a 4.11 GPA.<br>I&#8217;ve taken advanced coursework in AP Computer Science A, AP Computer Science Principles, Computer Programming, Engineering Design Honors, and Technology &amp; Engineering.<br>I&#8217;m an officer in my school&#8217;s computer science club, and my other activities include Technology Student Association, Cross Country, Bowling, Indoor &amp; Spring Track, Chinese Club, Gifted &amp; Talented, and National Honors Society.</p>
   </div>
-  <div class="panel" id="two-panel"> 
+  <div class="panel" id="three-panel"> 
     <div class = "exp">
       <ul><li><strong>Freelance Web Developer</strong><ul><li>Jul. 2020 &#8211; Feb. 2021</li><li>Designed &amp; developed websites for small business</li><li>WordPress, HTML, CSS</li><li><a href="https://handygeekz.com">handygeekz.com</a></li></ul></li><li> <b>Tutor, </b>Remote<ul><li>Nov. 2020 &#8211; Jan. 2021</li><li>Met with a student bi-weekly to tutor in general core classes.</li><li>Helped student develop time management, organization, and study skills.</li></ul></li><li><strong>E-Commerce Store Owner</strong><br /><ul><li>Aug. 2020 &#8211; Dec. 2020</li><li>Found a product and wholesaler, created a website, and developed a brand</li><li>Curated relationships for suppliers and ensured customer satisfaction</li><li>Created advertisements and ran campaigns via Facebook Ads</li></ul></li><li><strong>Data Entry</strong> at <strong>Dantex Group, </strong>Remote<br /><ul><li>Aug. 2020 &#8211; Oct. 2020</li><li>Completed administrative tasks</li><li>Updated, verified, and managed customer databases</li><li>Assisted in the implementation of a new CRM</li></ul></li><li><strong>Summer Camp Counselor </strong>at <b>Borough of Demarest</b><ul><li>Jun. 2018 &#8211; Aug. 2018, Jun. 2019 &#8211; Aug. 2019</li><li>Worked with two other counselors</li><li>Created a fun and engaging experience for campers while following the camp&#8217;s structure</li></ul></li></ul><div>
     </div>
     </div>
   </div>
-  <div class="panel" id="three-panel">
-    <a href = "https://linkedin.com/in/ryan-sanchez31">Connect with me on LinkedIn!</a>
+  <div class="panel" id="four-panel">
+    <a href = "https://linkedin.com/ryan-sanchez31">Connect with me on LinkedIn!</a>
     <br>
-   <a href = "https://github.com/ryan-31">Check out my Github!</a>
+    <a href = "https://github.com/ryan-31">Check out my GitHub</a>
   </div>
 </div>
 
